@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Connect | My Sports Archive</title>
+
+  <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body data-page="contact">
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <span>MY SPORTS</span> ARCHIVE
+    </a>
+
+    <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav">
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav id="main-nav" class="main-nav">
+      <a href="index.html" data-nav="home">INTRO</a>
+      <a href="archive.html" data-nav="archive">ARCHIVE</a>
+      <a href="values.html" data-nav="values">VALUES</a>
+      <a href="current.html" data-nav="current">CURRENT</a>
+      <a href="contact.html" data-nav="contact">CONNECT</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <p class="eyebrow">LET'S CONNECT</p>
+      <h1>당신의 스포츠 서사는 무엇인가요?</h1>
+      <p>
+        같은 최애 구단을 응원하거나,
+        스포츠 한판 토론이 필요한 모든 SSAFY 동료들의 방명록을 기다립니다.
+      </p>
+    </section>
+
+    <section class="content-wrap">
+      <div class="connect-grid">
+        <article class="contact-panel reveal">
+          <p class="eyebrow">OPEN CHANNEL</p>
+
+          <h2>언제든 말 걸어 주세요!</h2>
+
+          <p>
+            같은 스포츠 팬을 우연히 마주치거나,
+            다저스의 아침 선발 라인업을 두고 함께 즐겁게 분석할 수 있는
+            수다 상대가 아니어도 언제든 환영입니다.
+          </p>
+
+          <p>
+            <strong>김세헌 [2001년생]</strong><br>
+            SSAFY Campus, 대한민국<br>
+            <a href="mailto:contact@example.com">contact@example.com</a>
+          </p>
+        </article>
+
+        <section class="board-panel reveal">
+          <p class="eyebrow">FAN BOARD</p>
+
+          <h2>실시간 한 줄 토크 보드</h2>
+
+          <form id="board-form" class="board-form">
+            <label>
+              닉네임
+              <input
+                name="name"
+                maxlength="20"
+                required
+                placeholder="닉네임 또는 SSAFY 기수/이름"
+              >
+            </label>
+
+            <label>
+              메시지
+              <textarea
+                name="message"
+                rows="3"
+                maxlength="160"
+                required
+                placeholder="당신의 최애 팀이나 응원의 한마디를 적어보세요!"
+              ></textarea>
+            </label>
+
+            <button class="button primary" type="submit">
+              등록하기
+            </button>
+          </form>
+
+          <div
+            id="messages"
+            class="messages"
+            aria-live="polite"
+          ></div>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 My Sports Archive.</p>
+  </footer>
+
+  <script src="../js/main.js" defer></script>
+</body>
+</html>

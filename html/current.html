@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Current | My Sports Archive</title>
+
+  <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/woff2/PretendardVariable.woff2">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body data-page="current">
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <span>MY SPORTS</span> ARCHIVE
+    </a>
+
+    <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav">
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav id="main-nav" class="main-nav">
+      <a href="index.html" data-nav="home">INTRO</a>
+      <a href="archive.html" data-nav="archive">ARCHIVE</a>
+      <a href="values.html" data-nav="values">VALUES</a>
+      <a href="current.html" data-nav="current">CURRENT</a>
+      <a href="contact.html" data-nav="contact">CONNECT</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <p class="eyebrow">REAL-TIME STATE</p>
+
+      <h1>현재 나의 스포츠 주파수</h1>
+
+      <p>
+        지금 이 순간,
+        필드 밖을 서성이는 팬의 솔직한 고백입니다.
+      </p>
+    </section>
+
+    <section class="content-wrap">
+      <div class="current-feature reveal">
+        <img
+          src="../img/ssafy_current.png"
+          alt="경기장"
+        >
+
+        <div class="current-copy">
+          <span class="status">
+            <i></i>
+            Busy but Focused
+          </span>
+
+          <p class="eyebrow">CURRENT PULSE</p>
+
+          <h2>
+            SSAFY 몰두 중에도<br>
+            타오르는 마음
+          </h2>
+
+          <p>
+            현재 고도의 집중과 노력이 필요한 SSAFY 교육 훈련 기간으로 인해,
+            새벽 생중계를 빠짐없이 사수하기에는
+            다소 체력적 제약이 따르는 상황입니다.
+          </p>
+
+          <p>
+            하지만 경기 하이라이트를 부지런히 챙겨 보고,
+            리더십과 전술의 움직임을 포착하려는 탐구열만큼은
+            결코 멈추지 않고 있습니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="sports-quote reveal">
+        <p class="eyebrow">THE GREATEST OF ALL TIME</p>
+
+        <blockquote>
+          “현재 나의 모든 심장박동은
+          아르헨티나의 축구 영웅이자
+          우주 역사상 최고의 선수,
+          리오넬 메시를 향해 찬사를 보냅니다.”
+        </blockquote>
+
+        <p>- SSAFY 스포츠 팬의 진심 어린 주관 -</p>
+      </div>
+
+      <!-- ==========================================
+         [STREAMING_CHUNK:Rendering World Cup Match 1...]
+         ========================================== -->
+      <section class="prediction-arena reveal">
+        <div class="arena-title">
+          <p class="eyebrow"><i class="fa-solid fa-trophy"></i> 2026 WORLD CUP</p>
+          <h2>월드컵 토너먼트 승부예측</h2>
+          <p class="sub">나만의 우승 후보를 직접 선택하세요. 투표 현황이 다이내믹하게 즉각 계산됩니다.</p>
+        </div>
+
+        <!-- 매치 1: 프랑스 VS 스페인 -->
+        <div class="match-panel" id="m1-container">
+          <div class="match-meta">
+            <span class="schedule"><i class="fa-regular fa-calendar-days"></i> 2026년 7월 15일 수요일 04:00</span>
+            <h3>프랑스 <span>VS</span> 스페인</h3>
+          </div>
+          
+          <div class="teams-layout">
+            <!-- 프랑스 승리 예측 -->
+            <button class="poster-card" data-match="match1" data-team="A" aria-label="프랑스 승리 선택">
+              <img src="../img/france.png" alt="프랑스 음바페 에셋">
+              <div class="poster-overlay">
+                <span class="team-brand">FRANCE</span>
+                <span class="select-prompt" id="m1-prompt-A">프랑스 승리 예측</span>
+              </div>
+            </button>
+            
+            <!-- 스페인 승리 예측 -->
+            <button class="poster-card" data-match="match1" data-team="B" aria-label="스페인 승리 선택">
+              <img src="../img/spain.png" alt="스페인 야말 에셋">
+              <div class="poster-overlay">
+                <span class="team-brand">SPAIN</span>
+                <span class="select-prompt" id="m1-prompt-B">스페인 승리 예측</span>
+              </div>
+            </button>
+          </div>
+
+          <!-- 실시간 퍼센테이지 그래프 -->
+          <div class="metric-panel" id="match1-stats">
+            <div class="metric-header">
+              <span class="team-a-lbl" id="m1-lbl-A">프랑스 50%</span>
+              <span class="team-b-lbl" id="m1-lbl-B">스페인 50%</span>
+            </div>
+            <div class="graph-track">
+              <div class="graph-bar-a" id="m1-bar-A" style="width: 50%;"></div>
+              <div class="graph-bar-b" id="m1-bar-B" style="width: 50%;"></div>
+            </div>
+            <div class="metric-footer">
+              <span class="total-count" id="m1-total"><i class="fa-solid fa-square-poll-vertical"></i> 투표 집계 중</span>
+              <span class="realtime-badge">REAL-TIME</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ==========================================
+           [STREAMING_CHUNK:Rendering World Cup Match 2...]
+           ========================================== -->
+        <!-- 매치 2: 잉글랜드 VS 아르헨티나 -->
+        <div class="match-panel" id="m2-container">
+          <div class="match-meta">
+            <span class="schedule"><i class="fa-regular fa-calendar-days"></i> 2026년 7월 16일 목요일 04:00</span>
+            <h3>잉글랜드 <span>VS</span> 아르헨티나</h3>
+          </div>
+          
+          <div class="teams-layout">
+            <!-- 잉글랜드 승리 예측 -->
+            <button class="poster-card" data-match="match2" data-team="A" aria-label="잉글랜드 승리 선택">
+              <img src="../img/england.png" alt="잉글랜드 벨링엄 에셋">
+              <div class="poster-overlay">
+                <span class="team-brand">ENGLAND</span>
+                <span class="select-prompt" id="m2-prompt-A">잉글랜드 승리 예측</span>
+              </div>
+            </button>
+            
+            <!-- 아르헨티나 승리 예측 -->
+            <button class="poster-card" data-match="match2" data-team="B" aria-label="아르헨티나 승리 선택">
+              <img src="../img/argentina.png" alt="아르헨티나 리오넬 메시 에셋">
+              <div class="poster-overlay">
+                <span class="team-brand">ARGENTINA</span>
+                <span class="select-prompt" id="m2-prompt-B">아르헨티나 승리 예측</span>
+              </div>
+            </button>
+          </div>
+
+          <!-- 실시간 퍼센테이지 그래프 -->
+          <div class="metric-panel" id="match2-stats">
+            <div class="metric-header">
+              <span class="team-a-lbl" id="m2-lbl-A">잉글랜드 50%</span>
+              <span class="team-b-lbl" id="m2-lbl-B">아르헨티나 50%</span>
+            </div>
+            <div class="graph-track">
+              <div class="graph-bar-a" id="m2-bar-A" style="width: 50%;"></div>
+              <div class="graph-bar-b" id="m2-bar-B" style="width: 50%;"></div>
+            </div>
+            <div class="metric-footer">
+              <span class="total-count" id="m2-total"><i class="fa-solid fa-square-poll-vertical"></i> 투표 집계 중</span>
+              <span class="realtime-badge">REAL-TIME</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 My Sports Archive.</p>
+  </footer>
+  <script src="../js/main.js" defer></script>
+
+  
+</body>
+</html>
