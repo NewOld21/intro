@@ -17,10 +17,10 @@
 ---
 
 ### 데이터, 모델, 학습
-![alt text](./imgMP/image-1.png)
+![alt text](./imgPM/image-1.png)
 
 **머신러닝의 기본 흐름**
-![alt text](./imgMP/image-5.png)
+![alt text](./imgPM/image-5.png)
 
 
 * 머신러닝은 규칙을 직접 코딩하지 않고 **데이터에서 규칙을 학습**한다.
@@ -89,7 +89,7 @@ $$
 ---
 
 ### 비지도 학습
-![alt text](./imgMP/image-3.png)
+![alt text](./imgPM/image-3.png)
 > **정답 없이 데이터의 특징이나 구조를 찾는 학습 방법**
 
 대표적인 방법
@@ -107,7 +107,7 @@ $$
 
 
 ### K-겹 교차 검증 (K-Fold Cross Validation)
-![alt text](./imgMP/image-2.png)
+![alt text](./imgPM/image-2.png)
 > 데이터를 여러 번 나누어 학습과 검증을 반복하여 **모델의 일반화 성능을 안정적으로 평가하는 방법**
 
 **방법**
@@ -151,7 +151,7 @@ $$
 > **좋은 군집화:** 같은 클러스터에 있는 데이터끼리 최대한 비슷하게 만드는 것
 
 **K-Means 동작 과정**
-![alt text](./imgMP/image-4.png)
+![alt text](./imgPM/image-4.png)
 1. `K`개의 클러스터 중심을 초기화한다.
 2. 각 데이터를 **가장 가까운 중심**에 할당한다.
 3. 각 클러스터 데이터의 평균으로 **새로운 중심**을 계산한다.
