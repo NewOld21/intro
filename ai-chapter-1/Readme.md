@@ -400,7 +400,15 @@ top_alcohol_class = (
 malic_std = df["malic_acid"].std()        # 기본: ddof=1
 malic_std_pop = df["malic_acid"].std(ddof=0)
 ```
-
+**ddof=0**
+- 분모를 데이터 개수 그대로인 N으로 나눕니다.
+- 모집단을 구할 때 사용합니다.
+- Numpy 라이브러리의 기본값
+  
+**ddof=1**
+- 분모를 N - 1로 적용
+- 불편분산(표본 표준편차)을 구할 때 사용
+- Pandas 라이브러리의 기본값
 ---
 
 ### 3-6. Boolean 평균으로 비율 계산
@@ -517,12 +525,13 @@ df.drop(columns=["MEDV"])   # 동일한 결과, axis 헷갈릴 때 더 안전
 ```python
 cross_val_score(estimator=clf, X=X_train, y=y_train, cv=5, scoring="f1")
 ```
+> 교차 검증에서는 scoring 옵션으로 모델을 어떤 기준으로 평가할지 정하는 옵션
 
 | `scoring` | 의미 |
 |---|---|
-| `accuracy` | 전체 예측 중 맞춘 비율 |
-| `precision` | `1`이라 예측한 것 중 실제 `1`인 비율 |
-| `recall` | 실제 `1` 중 모델이 찾아낸 비율 |
+| `accuracy` | 전체 예측 중 맞춘 비율 (전체 정답률) |
+| `precision` | `1`이라 예측한 것 중 실제 `1`인 비율 (정밀도) |
+| `recall` | 실제 `1` 중 모델이 찾아낸 비율 (재현율) |
 | `f1` | Precision·Recall의 균형 (1에 가까울수록 좋음) |
 | `roc_auc` | 여러 임계값에서의 클래스 구분 능력 |
 
@@ -530,11 +539,11 @@ cross_val_score(estimator=clf, X=X_train, y=y_train, cv=5, scoring="f1")
 
 ### 3-14. PCA 주성분
 
-> 주성분은 기존 컬럼 하나가 아니라, **여러 특성을 조합한 새로운 축**이다.
+> 데이터의 특성이 너무 많을 때, 중요한 정보는 최대한 유지하면서 특성의 수를 줄이는 방법
+> 주성분은 기존 컬럼 하나가 아니라, **여러 특성을 조합한 새로운 축**
 
 - **PC1** — 데이터가 가장 많이 퍼진 방향 (설명력 최대)
 - **PC2** — PC1과 직각이면서 그다음으로 많이 퍼진 방향
-
 ---
 
 ### 3-15. `&=` 연산자
